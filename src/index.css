@@ -1,0 +1,159 @@
+/* Styles for the roadmap container */
+.roadmap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+ 
+}
+
+/* Styles for the roadmap list */
+.roadmap-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styles for the roadmap list items */
+.roadmap-list li {
+  margin: 0 10px;
+  position: relative;
+}
+
+/* Styles for the roadmap list item text */
+.roadmap-list li span {
+  font-size: 18px;
+}
+.roadmap-list li .tick {
+  font-size: 18px;
+}
+
+
+/* Styles for the completed list item */
+.roadmap-list li.completed {
+  color: #8BC34A;
+  
+}
+
+.roadmap-list li.pending {
+  color: #ffffff;
+  
+}
+/* Styles for the boy image */
+.boy-image {
+  width: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  transform-origin: bottom;
+}
+
+/* Animation styles for the boy image */
+@keyframes jump-up {
+  0% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotateZ(10deg);
+  }
+  100% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+}
+
+@keyframes jump-down {
+  0% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(30px) rotateZ(-10deg);
+  }
+  100% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+}
+
+/* Styles for the roadmap buttons */
+.roadmap-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Styles for the back button */
+.roadmap-buttons button:first-of-type {
+  margin-right: 20px;
+}
+
+/* Animation styles for the happy and sad jumps */
+.jump-happy {
+  animation-name: jump-up;
+}
+
+.jump-sad {
+  animation-name: jump-down;
+}
+
+/* Style for the audio player */
+.audio-player {
+  display: none;
+}
+
+
+.rounded-roadmap-completed{
+  border-radius: 50%;
+  background-color: green;
+  background-image: url('./components/tick.png');
+  background-size: cover; /* Adjust the size of the background image */
+  background-position: center;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rounded-roadmap-pending{
+  border-radius: 50%;
+  background-color: yellow;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.current-icon{
+  width: 50px;
+  border-radius: 50%;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98 vw;
+  height: 400px;
+}
+
+
+/* heart */
+.heart {
+  width: 250px;
+  height: 250px;
+
+  animation: heart 1s infinite alternate;
+}
+
+@keyframes heart {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
